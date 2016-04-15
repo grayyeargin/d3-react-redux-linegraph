@@ -14,11 +14,11 @@ module.exports = {
   entry: {
     base: ['webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './js/index']
+    './src/js/index']
   },
   output: {
     path: path.join(__dirname, 'static'),
-    filename: 'video-browser.js',
+    filename: 'main-asset.js',
     publicPath: '/static/'
   },
   resolve: {
@@ -32,7 +32,7 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'js')
+        include: path.join(__dirname, 'src/js')
       },
       {
         test: /\.scss$/,
