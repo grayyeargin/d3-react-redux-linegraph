@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../actions'
-import FirstComponent from '../components/FirstComponent';
+import LineGraph from '../components/LineGraph';
 
 export class FirstContainer extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export class FirstContainer extends React.Component {
     return (
       <div>
       	I am the first container...
-        <FirstComponent/>
+        <LineGraph/>
       </div>
     )
   }

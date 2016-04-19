@@ -3,7 +3,7 @@ import React from 'react'
 import configureStore from './store/index'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import FirstContainer from './containers/FirstContainer';
+import Chart from './containers/Chart';
 
 import '../sass/base.scss';
 
@@ -12,8 +12,7 @@ const store = configureStore()
 ReactDOM.render(
   <Provider store={store}>
   	<div>
-	  	Hello World!
-	  	<FirstContainer />
+	  	<Chart/>
 	  </div>
   </Provider>,
   document.getElementById('root')
