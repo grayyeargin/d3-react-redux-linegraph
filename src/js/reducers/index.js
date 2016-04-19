@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { SOME_ACTION } from '../actions'
 
 
-function aReducer(state = {}, action) {
+function lineData(state = {}, action) {
   switch (action.type) {
     case SOME_ACTION:
       return Object.assign({}, state, {
@@ -14,7 +14,7 @@ function aReducer(state = {}, action) {
 }
 
 const rootReducer = combineReducers({
-  aReducer
+  lineData
 })
 
 export default rootReducer
