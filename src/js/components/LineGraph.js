@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import d3 from 'd3'
-// import Line from 'Line'
+import Lines from 'Lines'
 
 export default class LineGraph extends React.Component{
 	constructor(props) {
@@ -32,9 +32,9 @@ export default class LineGraph extends React.Component{
   render() {
     const scales = { xScale: this.xScale(), yScale: this.yScale() };
   	return (
-  		<div>
-  			test data
-  		</div>
+  		<svg width={this.props.width} height={this.props.height}>
+  			<Lines {...this.props} {...scales} />
+  		</svg>
   	)
   }
 }
