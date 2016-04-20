@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import d3 from 'd3'
 import Lines from './Lines'
+import XAxis from './XAxis'
+import YAxis from './YAxis'
 
 export default class LineGraph extends React.Component{
 	constructor(props) {
@@ -31,9 +33,12 @@ export default class LineGraph extends React.Component{
 
   render() {
     const scales = { xScale: this.xScale(), yScale: this.yScale() };
+    const colors = d3.scale.category10()
   	return (
   		<svg width={this.props.width} height={this.props.height}>
-  			  <Lines {...this.props} {...scales} />
+        <XAxis {...this.props} {...scales} />
+        <YAxis {...this.props} {...scales} />
+  			<Lines {...this.props} {...scales} color={colors} />
   		</svg>
   	)
   }

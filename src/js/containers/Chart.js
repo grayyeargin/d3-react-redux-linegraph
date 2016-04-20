@@ -17,7 +17,6 @@ export class Chart extends React.Component {
   render() {
     return (
       <div>
-      	I am the first container...
         <LineGraph {...styles} {...this.props} />
       </div>
     )

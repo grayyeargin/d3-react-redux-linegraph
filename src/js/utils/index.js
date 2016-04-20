@@ -49,7 +49,7 @@ export const InitialData = {
 		},
 		"1": {
 			"title": "B",
-			"active": false,
+			"active": true,
 			"points": [
 				{
 					"x": 0,
@@ -95,7 +95,7 @@ export const InitialData = {
 		},
 		"2": {
 			"title": "C",
-			"active": false,
+			"active": true,
 			"points": [
 				{
 					"x": 0,
