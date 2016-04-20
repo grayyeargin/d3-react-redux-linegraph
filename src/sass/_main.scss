@@ -1,7 +1,23 @@
-// MAIN CSS
 body {
 	background: #fff;
 	margin: 0;
   font-size: 14px;
   font-family: Arial,"Helvetica Neue",Helvetica,sans-serif
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.data-line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
 }

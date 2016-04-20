@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import d3 from 'd3'
 
-const line = d3.svg.line()
-    .interpolate("basis")
-    .x(function(d) { return x(d.x); })
-    .y(function(d) { return y(d.y); });
-
 export default class Lines extends React.Component{
 	constructor(props) {
 		super(props);
@@ -15,14 +10,14 @@ export default class Lines extends React.Component{
 
   generateLine(linePoint, line) {
   	const lineInfo = this.props.lineData[linePoint]
-  	debugger;
   	const dAttr = line(lineInfo.points),
   		lineProps = {
   			d: dAttr,
-  			key: line
+  			key: linePoint,
+  			style: {stroke: 'rgb(44, 160, 44)'}
   		};
 
-  	return <path className="line" {...lineProps} />
+  	return <path className="data-line" {...lineProps} />
   }
 
   render() {
@@ -36,7 +31,7 @@ export default class Lines extends React.Component{
   		<g>
 	  		{
 	  			activeLines.map((linePoint) => {
-		  			return <g key={ 'key' + linePoint } className="data-point">
+		  			return <g key={ 'data-point-' + linePoint } className="data-point">
 		  				{this.generateLine(linePoint, line)}
 		  			</g>
 	  			})
