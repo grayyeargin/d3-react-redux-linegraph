@@ -2,7 +2,7 @@
 export const InitialData = {
 	"lineData": {
 		"0": {
-			"title": "A",
+			"title": "A Group of Data",
 			"active": true,
 			"points": [
 				{
@@ -48,7 +48,7 @@ export const InitialData = {
 			]
 		},
 		"1": {
-			"title": "B",
+			"title": "Bunch of Data",
 			"active": true,
 			"points": [
 				{
@@ -94,7 +94,7 @@ export const InitialData = {
 			]
 		},
 		"2": {
-			"title": "C",
+			"title": "Corral of Data",
 			"active": true,
 			"points": [
 				{

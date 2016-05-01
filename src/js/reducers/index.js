@@ -1,12 +1,23 @@
 import { combineReducers } from 'redux'
-import { SOME_ACTION } from '../actions'
+import { ACTIVE_STATE } from '../actions'
 
+function line(state = {}, action) {
+	switch (action.type) {
+    case ACTIVE_STATE:
+      return Object.assign({}, state, {
+        active: !state.active
+      })
+    default:
+      return state
+  }
+}
 
 function lineData(state = {}, action) {
   switch (action.type) {
-    case SOME_ACTION:
+    case ACTIVE_STATE:
+    	let thisLine = state[action.lineIndex]
       return Object.assign({}, state, {
-        'new state': 'a new state'
+        [action.lineIndex]: line(thisLine, action)
       })
     default:
       return state

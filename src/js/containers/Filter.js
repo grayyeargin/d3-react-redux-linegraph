@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as actions from '../actions'
+import { toggleActiveState } from '../actions'
 import FilterValues from '../components/FilterValues';
 
 export class Filter extends React.Component {
@@ -19,7 +19,8 @@ export class Filter extends React.Component {
 }
 
 Filter.propTypes = {
-  LegendInfo: React.PropTypes.array
+  FilterInfo: React.PropTypes.array,
+  actions: React.PropTypes.func
 }
 
 function mapStateToProps(state) {
@@ -37,4 +38,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, actions)(Filter)
+export default connect(mapStateToProps, {toggleActiveState})(Filter)
