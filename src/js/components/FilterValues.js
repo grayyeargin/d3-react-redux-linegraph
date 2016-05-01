@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default class LegendValues extends React.Component {
+export default class FilterValues extends React.Component {
 	constructor(props) {
 		super(props)
 	}
 
 	render() {
-		const lines = this.props.legendInfo
+		const lines = this.props.filterInfo
 		return(
 			<div>
 				{

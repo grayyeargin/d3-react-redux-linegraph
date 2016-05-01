@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
-import LegendValues from '../components/LegendValues';
+import FilterValues from '../components/FilterValues';
 
-export class Legend extends React.Component {
+export class Filter extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -12,19 +12,19 @@ export class Legend extends React.Component {
   render() {
     return (
       <div>
-        <LegendValues {...this.props} />
+        <FilterValues {...this.props} />
       </div>
     )
   }
 }
 
-Legend.propTypes = {
+Filter.propTypes = {
   LegendInfo: React.PropTypes.array
 }
 
 function mapStateToProps(state) {
 	const lineData = state.lineData
-  const legendInfo = Object.keys(state.lineData).map((line) => { 
+  const filterInfo = Object.keys(state.lineData).map((line) => { 
   	return { 
   		title: lineData[line].title,
   		active: lineData[line].active,
@@ -33,8 +33,8 @@ function mapStateToProps(state) {
    })
 
   return {
-    legendInfo
+    filterInfo
   }
 }
 
-export default connect(mapStateToProps, actions)(Legend)
+export default connect(mapStateToProps, actions)(Filter)
