@@ -33,12 +33,13 @@ export default class LineGraph extends React.Component{
 
   render() {
     const scales = { xScale: this.xScale(), yScale: this.yScale() };
-    const colors = d3.scale.category10()
+    const colors = d3.scale.category10().domain(this.props.lines)
+    
   	return (
   		<svg width={this.props.width} height={this.props.height}>
         <XAxis {...this.props} {...scales} />
         <YAxis {...this.props} {...scales} />
-  			<Lines {...this.props} {...scales} color={colors} />
+  			<Lines {...this.props} {...scales} colors={colors} />
   		</svg>
   	)
   }

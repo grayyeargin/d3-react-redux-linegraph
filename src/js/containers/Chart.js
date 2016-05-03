@@ -31,10 +31,12 @@ Chart.propTypes = {
 function mapStateToProps(state) {
   const lineData = state.lineData
   const activeLines = Object.keys(lineData).filter((line) => { return lineData[line].active })
+  const lines = Object.keys(lineData)
 
   return {
     lineData,
-    activeLines
+    activeLines,
+    lines
   }
 }
 

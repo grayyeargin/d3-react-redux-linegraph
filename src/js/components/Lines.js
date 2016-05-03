@@ -14,14 +14,14 @@ export default class Lines extends React.Component{
   		lineProps = {
   			d: dAttr,
   			key: linePoint,
-  			style: {stroke: this.props.color(linePoint)}
+  			style: {stroke: this.props.colors(linePoint)}
   		};
 
   	return <path className="data-line" {...lineProps} />
   }
 
   render() {
-  	const { lineData, activeLines, xScale, yScale, color } = this.props
+  	const { lineData, activeLines, xScale, yScale, colors } = this.props
   	const line = d3.svg.line()
 	    .interpolate("basis")
 	    .x(function(d) { return xScale(d.x); })
