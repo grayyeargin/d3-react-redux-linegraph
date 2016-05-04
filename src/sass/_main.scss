@@ -17,3 +17,40 @@ body {
   stroke: steelblue;
   stroke-width: 1.5px;
 }
+
+/* Checkbox */
+.roundcheck {
+  width: 15px;
+  height: 15px;
+  background: #ddd;
+  margin: 5px;
+  border-radius: 100%;
+  position: relative;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  display: inline-block;
+}
+
+.roundcheck__label {
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 1;
+  background: #333;
+  box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.roundcheck__input {
+  visibility: hidden;
+}
+
+.roundcheck .roundcheck__input:checked + .roundcheck__label {
+  background: #26ca28;
+}
+
+
