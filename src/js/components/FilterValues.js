@@ -19,8 +19,8 @@ export default class FilterValues extends React.Component {
 			<div>
 				{
 					lines.map( (line) => {
-						return <div>
-							<div className="roundcheck" key={line.index}>
+						return <div key={line.index}>
+							<div className="roundcheck">
 								<input className="roundcheck__input" onClick={this.handleClick.bind(this)} checked={line.active} type="checkbox" id={line.index} value={line.title} /> 
 								<label className="roundcheck__label" htmlFor={line.index}></label>
 							</div>
